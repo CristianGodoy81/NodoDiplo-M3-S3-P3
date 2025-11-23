@@ -1,0 +1,28 @@
+{
+  "name": "nododiplo-m3-s3-p3",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Bienvenidos al Sprint 3 del Modulo 3 Node JS\r En este Sprint vamos a seguir puliendo nuestro servidor para llevarlo a un nivel mas profesional.",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianGodoy81/NodoDiplo-M3-S3-P3.git"
+  },
+  "author": "Cristian Godoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristianGodoy81/NodoDiplo-M3-S3-P3/issues"
+  },
+  "homepage": "https://github.com/CristianGodoy81/NodoDiplo-M3-S3-P3#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.0.0"
+  }
+}
