@@ -90,6 +90,18 @@ export async function crearSuperheroeController(req, res){
     if(req.method === 'POST'){
         try {
             const datos = req.body;
+
+            // Convertir los string en array
+            if (typeof datos.poderes === 'string') {
+                datos.poderes = datos.poderes.split(',').map(p => p.trim()).filter(Boolean);
+            }
+            if (typeof datos.aliados === 'string' && datos.aliados.length > 0) {
+                datos.aliados = datos.aliados.split(',').map(a => a.trim()).filter(Boolean);
+            }
+            if (typeof datos.enemigos === 'string' && datos.enemigos.length > 0) {
+                datos.enemigos = datos.enemigos.split(',').map(e => e.trim()).filter(Boolean);
+            }
+
             const nuevoSuperheroe = await crearSuperheroe(datos);
             // return res.status(201).json(renderizarSuperheroe(nuevoSuperheroe));
             // return res.status(201).render('dashboard');
